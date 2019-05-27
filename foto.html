@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Demo Lazyload</title>
+        <style>
+            .img,img{width:500px; height: 300px; display: block} 
+        </style>
+    </head>
+    <body>
+        
+        <img src="images/blank.jpg" data-original="images/7.jpg" class="lazy">
+        
+        <script src="jquery.min.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="jquery.lazyload.min.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+                $("img.lazy").lazyload({effect : "fadeIn"});// untuk dipasang di <img src='xxxx'>
+                $("div.lazy").lazyload({effect : "fadeIn"});// untuk dipasang sebagai background / div
+            });
+        </script>
+    </body>
+</html>
